@@ -1,0 +1,23 @@
+﻿@model locationlookup.Models.Location
+
+@{ Layout = null; }
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Loookup Location</title>
+    <link href="/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="card shadow col-xs-6 col-sm-5 col-md-4 col-lg-3" style="margin:auto;">
+        <p class="card-header">Location</p>
+        <form method="post" class="card-body">
+            <p>@Model.City, @Model.Abbrev<br />
+                (@Model.State)</p>
+            <p><input value="@Model.Zip" name="zip"/></p>
+            <button type="submit">lookup</button>
+        </form>
+    </div>
+</body>
+</html>
